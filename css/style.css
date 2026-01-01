@@ -1,0 +1,67 @@
+body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.bg-custom-yellow {
+    background-color: #FFC300 !important;
+    color: #000000 !important;
+}
+
+.btn-custom-yellow {
+    background-color: #FFC300 !important;
+    color: #000000 !important;
+    border: none;
+    font-weight: bold;
+}
+.btn-custom-yellow:hover {
+    background-color: #e6b800 !important;
+}
+
+.hero-section {
+    background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    
+    min-height: 85vh; 
+    display: flex;    
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    
+    padding: 20px;
+    
+    border-radius: 0; 
+}
+
+.hero-section h1, .hero-section p {
+    text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000;
+}
+
+.card {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    border-radius: 20px; 
+    overflow: hidden;
+    border: none;
+    transition: 0.3s;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover; 
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2) !important;
+}
+
+.modal-content {
+    color: #000000 !important;
+}
