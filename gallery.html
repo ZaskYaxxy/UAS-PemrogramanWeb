@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Produk - Smesta Store</title>
+    <title>Galeri Produk - Smesta Store</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -17,121 +17,103 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link fw-bold" href="index.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link active fw-bold" href="gallery.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold" href="products.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="gallery.html">Galeri</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold" href="about.html">Tentang</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">Kontak</a></li>
                 </ul>
-                <button class="btn btn-dark ms-lg-3 mt-3 mt-lg-0 position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
-                    <i class="bi bi-cart-fill"></i> <span class="d-none d-lg-inline">Keranjang</span>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartBadge">0</span>
-                </button>
             </div>
         </div>
     </nav>
 
-    <div class="container my-5" id="produk">
-        <h2 class="text-center mb-4 fw-bold">Katalog Produk</h2>
-        <div class="col-lg-10 col-xl-9 mx-auto">
-            <div class="row row-cols-1 row-cols-md-3 g-3"> 
-                
-                <div class="col">
-                    <div class="card shadow h-100">
-                        <img src="https://mgmall.s3.amazonaws.com/img/102024/7eb6775eb887017fa23ecf11ddab7bab7cb71b96.jpg" class="card-img-top" alt="Router">
-                        <div class="card-body text-center p-3">
-                            <h5 class="card-title fs-5">Router Home Basic</h5>
-                            <p class="text-primary fw-bold small mb-1">Rp 350.000</p>
-                            <p class="card-text text-muted small">Sinyal stabil untuk harian.</p>
-                            <button class="btn btn-custom-yellow btn-sm rounded-pill w-100 mt-1" onclick="tambahKeKeranjang('Router Home Basic', 350000)">Beli</button>
-                        </div>
+    <div class="container my-5">
+        <h2 class="text-center mb-4 fw-bold">Galeri & Detail Produk</h2>
+        <p class="text-center text-muted mb-5">Informasi lengkap mengenai perangkat jaringan yang tersedia di Smesta Store.</p>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            
+            <div class="col">
+                <div class="card shadow h-100">
+                    <img src="https://mgmall.s3.amazonaws.com/img/102024/7eb6775eb887017fa23ecf11ddab7bab7cb71b96.jpg" class="card-img-top" alt="Router">
+                    <div class="card-body text-center p-3">
+                        <h5 class="card-title fs-5 fw-bold mb-3">Router Home Basic</h5>
+                        <p class="card-text text-muted small" style="text-align: justify;">
+                            Router ekonomis yang dirancang khusus untuk penggunaan rumahan sehari-hari. Sangat ideal untuk keluarga kecil dengan penggunaan internet standar seperti browsing, media sosial, dan streaming video ringan. Mendukung hingga 10 perangkat sekaligus dengan sinyal yang stabil.
+                        </p>
+                        <a href="products.html" class="btn btn-custom-yellow btn-sm rounded-pill w-100 mt-3">Beli Sekarang <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
-
-                <div class="col">
-                    <div class="card shadow h-100">
-                        <img src="https://tse2.mm.bing.net/th/id/OIP.BCb1xo1jnPnV-Yywh2ktAgHaF1?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Gaming">
-                        <div class="card-body text-center p-3">
-                            <h5 class="card-title fs-5">ASUS TUF-AX3000</h5>
-                            <p class="text-success fw-bold small mb-1">Rp 2.390.625</p>
-                            <p class="card-text text-muted small">Low latency & WiFi 6.</p>
-                            <button class="btn btn-custom-yellow btn-sm rounded-pill w-100 mt-1" onclick="tambahKeKeranjang('ASUS TUF-AX3000 V2', 2390625)">Beli</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow h-100">
-                        <img src="https://sm.pcmag.com/pcmag_au/photo/a/arris-mesh/arris-mesh-router_q391.jpg" class="card-img-top" alt="Mesh">
-                        <div class="card-body text-center p-3">
-                            <h5 class="card-title fs-5">Arris Surfboard Max</h5>
-                            <p class="text-danger fw-bold small mb-1">Rp 4.850.000</p>
-                            <p class="card-text text-muted small">Sistem Mesh anti dead-zone.</p>
-                            <button class="btn btn-custom-yellow btn-sm rounded-pill w-100 mt-1" onclick="tambahKeKeranjang('Arris Surfboard Max', 4850000)">Beli</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow h-100">
-                        <img src="https://tse2.mm.bing.net/th/id/OIP.WETQMLSB24SvVQ-XcjvJmgHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Extender">
-                        <div class="card-body text-center p-3">
-                            <h5 class="card-title fs-5">Xiaomi Extender Pro</h5>
-                            <p class="text-warning fw-bold small mb-1">Rp 150.000</p>
-                            <p class="card-text text-muted small">Perluas jangkauan WiFi.</p>
-                            <button class="btn btn-custom-yellow btn-sm rounded-pill w-100 mt-1" onclick="tambahKeKeranjang('Xiaomi Extender Pro', 150000)">Beli</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow h-100">
-                        <img src="https://electronix.ma/wp-content/uploads/2025/08/4G-LTE-USB-WiFi-Modem-Portable-4G-Router-500Mbps-with-850x843.jpg" class="card-img-top" alt="Modem">
-                        <div class="card-body text-center p-3">
-                            <h5 class="card-title fs-5">4G LTE USB Modem</h5>
-                            <p class="text-info fw-bold small mb-1">Rp 360.000</p>
-                            <p class="card-text text-muted small">Internet portabel & praktis.</p>
-                            <button class="btn btn-custom-yellow btn-sm rounded-pill w-100 mt-1" onclick="tambahKeKeranjang('4G LTE USB WiFi Modem', 360000)">Beli</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card shadow h-100">
-                        <img src="https://content.etilize.com/Alternate-Image12/1086715353.jpg" class="card-img-top" alt="Enterprise">
-                        <div class="card-body text-center p-3">
-                            <h5 class="card-title fs-5">ASUS ROG RTX 5090</h5>
-                            <p class="text-primary fw-bold small mb-1">Rp 57.999.000</p>
-                            <p class="card-text text-muted small">Performa tinggi korporat.</p>
-                            <button class="btn btn-custom-yellow btn-sm rounded-pill w-100 mt-1" onclick="tambahKeKeranjang('ASUS ROG Astral RTX 5090', 57999000)">Beli</button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+            <div class="col">
+                <div class="card shadow h-100">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.BCb1xo1jnPnV-Yywh2ktAgHaF1?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Gaming">
+                    <div class="card-body text-center p-3">
+                        <h5 class="card-title fs-5 fw-bold mb-3">ASUS TUF-AX3000</h5>
+                        <p class="card-text text-muted small" style="text-align: justify;">
+                            Router gaming kelas berat dengan teknologi WiFi 6 terbaru. Didesain untuk memberikan latensi ultra-rendah (ping kecil) yang sangat krusial bagi pemain game kompetitif. Dilengkapi dengan fitur keamanan jaringan tingkat lanjut dan port khusus gaming untuk prioritas koneksi.
+                        </p>
+                        <a href="products.html" class="btn btn-custom-yellow btn-sm rounded-pill w-100 mt-3">Beli Sekarang <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow h-100">
+                    <img src="https://sm.pcmag.com/pcmag_au/photo/a/arris-mesh/arris-mesh-router_q391.jpg" class="card-img-top" alt="Mesh">
+                    <div class="card-body text-center p-3">
+                        <h5 class="card-title fs-5 fw-bold mb-3">Arris Surfboard Max</h5>
+                        <p class="card-text text-muted small" style="text-align: justify;">
+                            Solusi terbaik untuk rumah bertingkat atau area luas. Sistem Mesh canggih ini mampu menghilangkan area tanpa sinyal (dead-zone) di setiap sudut rumah Anda. Memberikan pengalaman satu nama WiFi (SSID) yang mulus saat Anda berpindah dari lantai satu ke lantai dua.
+                        </p>
+                        <a href="products.html" class="btn btn-custom-yellow btn-sm rounded-pill w-100 mt-3">Beli Sekarang <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow h-100">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.WETQMLSB24SvVQ-XcjvJmgHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Extender">
+                    <div class="card-body text-center p-3">
+                        <h5 class="card-title fs-5 fw-bold mb-3">Xiaomi Extender Pro</h5>
+                        <p class="card-text text-muted small" style="text-align: justify;">
+                            Alat kecil yang powerful untuk memperluas jangkauan WiFi Anda. Jika sinyal router utama tidak sampai ke kamar belakang atau teras, alat ini solusinya. Pemasangan sangat mudah, cukup colok ke listrik dan setting melalui aplikasi di HP.
+                        </p>
+                        <a href="products.html" class="btn btn-custom-yellow btn-sm rounded-pill w-100 mt-3">Beli Sekarang <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow h-100">
+                    <img src="https://electronix.ma/wp-content/uploads/2025/08/4G-LTE-USB-WiFi-Modem-Portable-4G-Router-500Mbps-with-850x843.jpg" class="card-img-top" alt="Modem">
+                    <div class="card-body text-center p-3">
+                        <h5 class="card-title fs-5 fw-bold mb-3">4G LTE USB Modem</h5>
+                        <p class="card-text text-muted small" style="text-align: justify;">
+                            Modem portabel serbaguna yang praktis dibawa bepergian. Cukup masukkan kartu SIM 4G dari operator mana saja, lalu colokkan ke laptop, powerbank, atau kepala charger untuk memancarkan sinyal WiFi pribadi di mana saja Anda berada.
+                        </p>
+                        <a href="products.html" class="btn btn-custom-yellow btn-sm rounded-pill w-100 mt-3">Beli Sekarang <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow h-100">
+                    <img src="https://content.etilize.com/Alternate-Image12/1086715353.jpg" class="card-img-top" alt="Enterprise">
+                    <div class="card-body text-center p-3">
+                        <h5 class="card-title fs-5 fw-bold mb-3">ASUS ROG RTX 5090</h5>
+                        <p class="card-text text-muted small" style="text-align: justify;">
+                            Perangkat keras kelas "Sultan" untuk performa komputasi dan grafis tanpa batas. Dirancang untuk workstation kantor desain, rendering 3D berat, atau pusat data mini yang membutuhkan kestabilan dan kecepatan pemrosesan data tingkat tinggi.
+                        </p>
+                        <a href="products.html" class="btn btn-custom-yellow btn-sm rounded-pill w-100 mt-3">Beli Sekarang <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-custom-yellow">
-                    <h5 class="modal-title fw-bold">Keranjang Belanja</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <ul id="cartList" class="list-group mb-3"><li class="list-group-item text-center">Kosong</li></ul>
-                    <div class="d-flex justify-content-between"><span class="fw-bold">Total:</span><span class="fw-bold text-primary" id="cartTotal">Rp 0</span></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                    <button type="button" class="btn btn-dark" onclick="checkout()">Checkout</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="bg-custom-yellow text-center p-4 mt-5" style="border-radius: 30px 30px 0 0;">
-        <p class="mb-0 fw-bold">&copy; 2025 BAGUS ADITYA SUWITO - 251011700125 - 01SIFP002 <span id="waktu-sekarang"></span></p>
-    </footer>
+    <footer id="main-footer" class="bg-custom-yellow text-center p-4 mt-5" style="border-radius: 30px 30px 0 0;"></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>

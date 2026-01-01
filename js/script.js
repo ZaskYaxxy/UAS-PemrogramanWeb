@@ -1,5 +1,44 @@
 let cart = [];
 
+function renderFooter() {
+    const footerElement = document.getElementById("main-footer");
+    if (footerElement) {
+        const nama = "BAGUS ADITYA SUWITO";
+        const nim = "251011700125";
+        const kelas = "01SIFP002"; 
+        const tahun = "2026"; 
+
+        footerElement.innerHTML = `
+            <p class="mb-0 fw-bold">
+                &copy; ${tahun} ${nama} - ${nim} - ${kelas} <br>
+                <span id="waktu-sekarang" class="fw-normal small"></span>
+            </p>
+        `;
+    }
+}
+
+function updateWaktu() {
+    const footerWaktu = document.getElementById("waktu-sekarang");
+    if(footerWaktu) {
+        const now = new Date();
+        
+        const options = { 
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit', 
+            timeZoneName: 'short'
+        };
+        
+        const timeString = now.toLocaleString(undefined, options);
+        
+        footerWaktu.innerText = "📅 " + timeString;
+    }
+}
+
 const formatRupiah = (number) => {
     return new Intl.NumberFormat('id-ID', {
         style: 'currency',
@@ -60,29 +99,14 @@ function checkout() {
         alert("Pesanan Diterima!\n\n" + message);
         cart = [];
         updateCartUI();
-        
         const modalEl = document.getElementById('cartModal');
         const modal = bootstrap.Modal.getInstance(modalEl);
         if(modal) modal.hide();
     }
 }
 
-function updateWaktu() {
-    const footerWaktu = document.getElementById("waktu-sekarang");
-    if(footerWaktu) {
-        const now = new Date();
-        
-        const options = { 
-            hour: '2-digit', 
-            minute: '2-digit', 
-            second: '2-digit', 
-            timeZoneName: 'short' 
-        };
-        
-        const timeString = now.toLocaleTimeString(undefined, options);
-        
-        footerWaktu.innerText = " | 🕒 " + timeString;
-    }
-}
-setInterval(updateWaktu, 1000);
-updateWaktu();
+document.addEventListener("DOMContentLoaded", function() {
+    renderFooter();
+    setInterval(updateWaktu, 1000);
+    updateWaktu();
+});
